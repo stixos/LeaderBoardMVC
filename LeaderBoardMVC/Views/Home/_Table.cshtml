@@ -1,0 +1,20 @@
+﻿    <table class="table table-fixed table-striped">
+         <thead>
+            <tr>
+                <th class="col-xs-2">Rank</th>
+                <th class="col-xs-5">Name</th>
+                <th class="col-xs-2">Score</th>
+                <th class="col-xs-3">Time</th>
+            </tr>
+        </thead>
+
+        <tbody data-bind="foreach: achievements">
+            <tr>
+                <td class="col-xs-2" data-bind="text: Index"></td>
+                <td class="col-xs-5" data-bind="text: Player"></td>
+                <td class="col-xs-2" data-bind="text: Achievement"></td>
+                <td class="col-xs-3" data-bind="text: DateTime"></td>
+            </tr>
+        </tbody>
+
+    </table>

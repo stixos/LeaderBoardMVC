@@ -1,0 +1,17 @@
+﻿<div class="panel panel-primary">
+    <div class="panel-body" data-bind="with: gameModel">
+
+        <ul class="nav nav-pills" data-bind="foreach: games">
+            <li data-bind="css: $index() == 0 ? 'active' : ''">
+                <a data-toggle="tab"
+                   data-bind="attr: { href: '#gtabs-' + $index() }, text: $data.Name,
+                                          click: $parent.fClick "></a>
+            </li>
+        </ul>
+
+        <div data-bind="foreach: games" class="tab-content">
+            <div data-bind="attr:{ id:'gtabs-'+$index() }"></div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,19 @@
+﻿<div class="panel panel-primary" style="height: 360px">
+    <div class="panel-body" data-bind="with: achievementModel">
+
+        <ul class="nav nav-pills" data-bind="foreach: timeTabs">
+            <li data-bind="css: $index() == 0 ? 'active' : ''">
+                <a data-toggle="tab"
+                   data-bind="attr: { href: '#ttabs-' + $index() }, text: $data.Text,
+                                          click: $parent.fClick "></a>
+            </li>
+        </ul>
+
+        <div data-bind="foreach: timeTabs" class="tab-content">
+            <div data-bind="attr:{ id:'ttabs-'+$index() }"></div>
+        </div>
+
+        @Html.Partial("_Table")
+
+    </div>
+</div>
